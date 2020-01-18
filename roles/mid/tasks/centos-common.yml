@@ -1,0 +1,35 @@
+#- name: 添加EPEL仓库
+#  yum: name=epel-release state=latest
+
+- name: sync mid
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "node_exporter"
+  - "consul"
+  - "ilogtail"
+
+- name: sync mid script
+  template:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}/{{ item }}"
+    owner: "ops"
+    group: "ops"
+  with_items:
+  - "consul/start-consul-agent.sh"
+
+- name: 注册变量ilogtail
+  shell: "ps aux | grep /usr/local/ilogtail/ilogtail | grep -v grep"
+  register: ilogtail
+
+- name: exec script
+  shell: "{{ REMOTE_PATH }}/{{ item }}"
+  with_items:
+  - "ilogtail/install-ilogtail.sh"
+  when: '"/usr/local/ilogtail/ilogtail" not in ilogtail.stdout'
+
+

@@ -1,0 +1,18 @@
+- import_tasks: centos-common.yml
+  when: ansible_distribution == "CentOS"
+
+- name: sync init.d
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ INIT_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "init.d/"
+
+- name: add /etc/rc.local
+  lineinfile: dest=/etc/rc.local line="bash {{ INIT_PATH }}/system-init.sh"
+
+- name: chmod +x /etc/rc.local
+  shell: chmod +x /etc/rc.d/rc.local

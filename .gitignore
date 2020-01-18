@@ -1,0 +1,3 @@
+# k8s binaries directory
+bin/*
+!bin/README.md

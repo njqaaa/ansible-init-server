@@ -1,0 +1,19 @@
+- name: sync mid script 
+  template:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}/{{ item }}"
+    owner: "ops"
+    group: "ops"
+  with_items:
+  - "node_exporter/node_exporter.service"
+
+- name: add node_exporter.service
+  shell: mv "{{ REMOTE_PATH }}/{{ item }}" /etc/systemd/system/node_exporter.service
+  with_items:
+  - "node_exporter/node_exporter.service"
+
+- name: restart node_exporter
+  service:
+    name: node_exporter
+    state: restarted
+    enabled: true
