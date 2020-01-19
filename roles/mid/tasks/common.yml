@@ -13,23 +13,26 @@
   - "consul"
   - "ilogtail"
 
+- name: add consul link
+  shell: ln -sf "{{ REMOTE_PATH }}"/consul/consul "{{ BIN_DIR}}"
+
 - name: sync mid script
   template:
     src: "{{ item }}"
     dest: "{{ REMOTE_PATH }}/{{ item }}"
     owner: "ops"
     group: "ops"
+    mode: "0755"
   with_items:
   - "consul/start-consul-agent.sh"
 
 - name: 注册变量ilogtail
   shell: "ps aux | grep /usr/local/ilogtail/ilogtail | grep -v grep"
   register: ilogtail
+  ignore_errors: yes
 
 - name: exec script
   shell: "{{ REMOTE_PATH }}/{{ item }}"
   with_items:
   - "ilogtail/install-ilogtail.sh"
   when: '"/usr/local/ilogtail/ilogtail" not in ilogtail.stdout'
-
-
