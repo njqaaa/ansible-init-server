@@ -36,3 +36,4 @@
   with_items:
   - "ilogtail/install-ilogtail.sh"
   when: '"/usr/local/ilogtail/ilogtail" not in ilogtail.stdout'
+  ignore_errors: yes

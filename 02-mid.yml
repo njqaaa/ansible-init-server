@@ -1,6 +1,7 @@
 # prepare tasks for all nodes
 - hosts:
-  - all
+  - 10.20.1.104
+#  - centos6
   roles:
   - mid
 

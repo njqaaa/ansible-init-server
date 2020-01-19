@@ -4,7 +4,7 @@
 - name: sync init.d
   synchronize:
     src: "{{ item }}"
-    dest: "{{ INIT_PATH }}"
+    dest: "{{ INIT_D_PATH }}"
     owner: true
     group: true
     recursive: yes
@@ -12,7 +12,7 @@
   - "init.d/"
 
 - name: add /etc/rc.local
-  lineinfile: dest=/etc/rc.local line="bash {{ INIT_PATH }}/system-init.sh"
+  lineinfile: dest=/etc/rc.local line="bash {{ INIT_D_PATH }}/system-init.sh"
 
 - name: chmod +x /etc/rc.local
   shell: chmod +x /etc/rc.d/rc.local

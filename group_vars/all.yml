@@ -1,3 +1,4 @@
 REMOTE_PATH: /opt
-INIT_PATH: /etc/init.d
+INIT_D_PATH: /etc/init.d
+SYSTEMD_PATH: /etc/systemd/system
 BIN_DIR: /usr/local/bin

@@ -1,13 +1,19 @@
 - name: sync mid script 
   template:
-    src: "{{ item }}"
-    dest: "{{ REMOTE_PATH }}/{{ item }}"
-    owner: "ops"
-    group: "ops"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "root"
+    group: "root"
+    mode: 0755
   with_items:
-  - "node_exporter/node_exporter.service"
+  - {src: "node_exporter/node_exporter", dest: "{{ INIT_D_PATH }}/node_exporter" }
 
-- name: add node_exporter service
-  shell: ln -sf "{{ REMOTE_PATH }}/{{ item }}" /etc/systemd/system/node_exporter.service
+- name: restart 
+  shell: /etc/init.d/{{ item }} restart
   with_items:
-  - "node_exporter/node_exporter.service"
+  - "node_exporter"
+
+- name: chkconfig --add
+  shell: chkconfig --add {{ item }}
+  with_items:
+  - "node_exporter"

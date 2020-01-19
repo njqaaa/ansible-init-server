@@ -1,76 +1,35 @@
 #!/bin/bash
-#
-#	/etc/rc.d/init.d/node_exporter
-#
-# chkconfig: 2345 80 80
-
-# Source function library.
-. /etc/init.d/functions
-
-
-RETVAL=0
-PROG="node_exporter"
-DAEMON_SYSCONFIG=/etc/sysconfig/${PROG}
-DAEMON={{ REMOTE_PATH }}/node_exporter/${PROG} #要把安装目录下/opt/node_exporter/node_exporter可执行文件拷贝到/usr/bin目录下
-PID_FILE=/var/run/prometheus/${PROG}.pid
-LOCK_FILE=/var/lock/subsys/${PROG}
-LOG_FILE=/var/log/prometheus/node_exporter.log
-DAEMON_USER="prometheus"
-FQDN=$(hostname)
-GOMAXPROCS=$(grep -c ^processor /proc/cpuinfo)
-
-. ${DAEMON_SYSCONFIG}
-
+# chkconfig: 2345 10 90  
+app_name="node_exporter"
+pid_file="/var/run/${app_name}.pid"
 start() {
-  if check_status > /dev/null; then
-    echo "node_exporter is already running"
-    exit 0
-  fi
-
-  echo -n $"Starting node_exporter: "
-  daemonize -u ${DAEMON_USER} -p ${PID_FILE} -l ${LOCK_FILE} -a -e ${LOG_FILE} -o ${LOG_FILE} ${DAEMON} ${ARGS}
-  RETVAL=$?
-  echo ""
-  return $RETVAL
+        echo -n $"Starting ${application_name} logger: "
+        nohup {{ REMOTE_PATH }}/${app_name}/${app_name} >> /tmp/${app_name}.log 2>&1 & echo $! > ${pid_file}
 }
-
 stop() {
-    echo -n $"Stopping node_exporter: "
-    killproc -p ${PID_FILE} -d 10 ${DAEMON}
-    RETVAL=$?
-    echo
-    [ $RETVAL = 0 ] && rm -f ${LOCK_FILE} ${PID_FILE}
-    return $RETVAL
+        echo "Shutting down ${application_name} logger: "
+        if [[ -f ${pid_file} ]];then
+             kill -9 $(cat ${pid_file})
+        fi
 }
-
-check_status() {
-    status -p ${PID_FILE} ${DAEMON}
-    RETVAL=$?
-    return $RETVAL
+restart() {
+        stop
+        start
 }
 
 case "$1" in
-    start)
+  start)
         start
         ;;
-    stop)
+  stop)
         stop
         ;;
-    status)
-	check_status
+  restart)
+        restart
         ;;
-    reload|force-reload)
-        reload
-        ;;
-    restart)
-        stop
-        start
-        ;;
-    *)
-        N=/etc/init.d/${NAME}
-        echo "Usage: $N {start|stop|status|restart|force-reload}" >&2
-        RETVAL=2
-        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart}"
+        exit 3
 esac
 
-exit ${RETVAL}
+exit $?
