@@ -17,5 +17,7 @@
       - screen
       - wget
       - nload
+      - iftop
+      - iotop
     state: latest
 

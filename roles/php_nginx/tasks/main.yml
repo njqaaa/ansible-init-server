@@ -1,0 +1,19 @@
+- name: chown ops
+  shell: chown ops:ops -R {{ item }}
+  with_items:
+  - "/var/log/nginx"
+
+- name: sync nginx conf
+  synchronize:
+    src: "{{ item }}"
+    dest: "/etc/nginx/"
+    owner: true
+    group: true
+    recursive: yes
+    delete: yes
+  with_items:
+  - "nginx/"
+
+
+- name: reload nginx
+  shell: /usr/local/bin/nginx -s reload

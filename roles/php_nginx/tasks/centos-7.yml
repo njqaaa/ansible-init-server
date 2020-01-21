@@ -6,14 +6,12 @@
   - "jaeger/jaeger-agent.service"
 
 - name: add jaeger-agent.service
-  shell: mv "{{ REMOTE_PATH }}/{{ item.src }}" "{{ item.dest }}"
+  shell: mv "{{ REMOTE_PATH }}/{{ item }}" /etc/systemd/system/jaeger-agent.service
   with_items:
-  - {src: "jaeger/jaeger-agent.service", dest: "{{ SYSTEMD_PATH }}/jaeger-agent.service" }
+  - "jaeger/jaeger-agent.service"
 
-- name: restart service
+- name: restart jaeger-agent
   service:
-    name: "{{ item }}"
+    name: jaeger-agent
     state: restarted
     enabled: true
-  with_items:
-  - "jaeger-agent.service"
