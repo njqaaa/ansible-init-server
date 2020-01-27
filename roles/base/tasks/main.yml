@@ -16,3 +16,10 @@
 
 - name: chmod +x /etc/rc.local
   shell: chmod +x /etc/rc.d/rc.local
+
+- name: ntpdate for reboot
+  cron: name="ntpdate for reboot" special_time="reboot" job="/usr/sbin/ntpdate ntp1.aliyun.com"
+
+- name: add ntpdate time
+  cron: name="update time" hour="*/6" job="/usr/sbin/ntpdate ntp1.aliyun.com"
+

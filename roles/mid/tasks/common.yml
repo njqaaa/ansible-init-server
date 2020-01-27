@@ -10,6 +10,7 @@
   - "consul"
   - "ilogtail"
   - "cloudmonitor"
+  - "saltstack"
 
 - name: add consul link
   shell: ln -sf "{{ REMOTE_PATH }}"/consul/consul "{{ BIN_DIR}}"
@@ -29,7 +30,7 @@
   register: ilogtail
   ignore_errors: yes
 
-- name: exec script
+- name: exec ilogtail script
   shell: "{{ REMOTE_PATH }}/{{ item }}"
   with_items:
   - "ilogtail/install-ilogtail.sh"
@@ -46,4 +47,16 @@
   with_items:
   - "cloudmonitor/install-cloudmonitor.sh"
   when: '"2.1.56" not in cloudmonitor.stdout'
+  ignore_errors: yes
+
+- name: 注册变量saltstack
+  shell: "ps aux | grep /usr/bin/salt-minion | grep -v grep"
+  register: saltstack
+  ignore_errors: yes
+
+- name: exec saltstack script
+  shell: "{{ REMOTE_PATH }}/{{ item }} -P"
+  with_items:
+  - "saltstack/install_salt.sh"
+  when: '"/usr/bin/salt-minion" not in saltstack.stdout'
   ignore_errors: yes
