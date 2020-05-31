@@ -1,0 +1,11 @@
+/logs/*20*.log
+/opt/apps/logs/*20*.log
+{
+        daily
+        dateext
+        missingok
+        rotate 5
+        compress
+        nocreate
+        notifempty
+}

@@ -1,0 +1,1960 @@
+10.88.19.186 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.186\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.183 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.183\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.185 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.185\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.182 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.182\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.184 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.184\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.180 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.180\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.178 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.178\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.179 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.179\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.177 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.177\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.176 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.176\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.175 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.175\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.174 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.174\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.173 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.173\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.170 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.170\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.172 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.88.19.172\". Make sure this host can be reached over ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", 
+    "unreachable": true
+}
+10.88.19.163 | CHANGED | rc=0 >>
+
+10.88.252.215 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.88.89.46 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.88.22.194 | CHANGED | rc=0 >>
+*/5 * * * * /bin/bash /opt/bin/clean-log.sh
+
+@reboot cd /opt/deploy/ && bash start.sh
+
+#Ansible: ntpdate for reboot
+@reboot /usr/sbin/ntpdate ntp1.aliyun.com
+#Ansible: update time
+0 */6 * * * /usr/sbin/ntpdate ntp1.aliyun.com
+#Ansible: system init for reboot
+@reboot bash /etc/init.d/system-init.sh
+10.88.21.193 | CHANGED | rc=0 >>
+*/5 * * * * /bin/bash /opt/bin/clean-log.sh
+
+@reboot cd /opt/deploy/ && bash start.sh
+
+#Ansible: ntpdate for reboot
+@reboot /usr/sbin/ntpdate ntp1.aliyun.com
+#Ansible: update time
+0 */6 * * * /usr/sbin/ntpdate ntp1.aliyun.com
+#Ansible: system init for reboot
+@reboot bash /etc/init.d/system-init.sh
+10.21.175.189 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.88.89.48 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.88.89.47 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.21.175.165 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.49 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.47 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.50 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.48 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.9.0.158 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.1.132.190 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.188 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.189 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.187 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.186 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.26 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.13 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.46 | CHANGED | rc=0 >>
+* * * * * www /usr/local/bin/php /data/www-data/hupu.com/du-lannister/yii schedule/run --scheduleFile=/data/www-data/hupu.com/du-lannister/config/schedule.php >> /data/www-data/hupu.com/du-lannister/runtime/logs/schedule.log 2>&1
+MAILTO=""
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.12 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.45 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.15 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.44 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.148 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.25.2.217 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.150 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.149 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.147 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.151 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.146 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.145 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.43 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.157 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.24.37.42 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.170 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.169 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.11 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.24.37.40 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.38 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.36 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.39 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.35 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.37 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.34 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.9.0.156 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.9.0.155 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.6.1.5 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.6.1.6 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.9.0.154 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.255.255.25 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.22 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.23 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.234 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.235 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.233 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.231 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.232 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.230 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.229 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.21.175.142 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.3.215 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.9.0.153 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.21.175.141 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.143 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.158 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.139 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.9.0.152 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.31 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.33 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.32 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.29 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.28 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.140 | CHANGED | rc=0 >>
+0 */2 * * * rm -rf /data/www-data/du/backup/
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.27 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.30 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.26 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.151 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.58 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.105 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.156 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.195 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.155 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.104 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.194 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.57 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.193 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.103 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.102 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.154 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.56 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.153 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.97 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.96 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.23.35.234 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.24.37.25 | CHANGED | rc=0 >>
+* * * * * www /usr/local/bin/php /data/www-data/hupu.com/du-lannister/yii schedule/run --scheduleFile=/data/www-data/hupu.com/du-lannister/config/schedule.php >> /data/www-data/hupu.com/du-lannister/runtime/logs/schedule.log 2>&1
+MAILTO=""
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.19 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.95 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.192 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.191 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.94 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.190 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.92 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.55 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.10 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.151 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.145 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.9.0.143 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.9.0.140 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.142 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.138 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.144 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.141 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.139 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.135 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.136 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.9.0.137 | CHANGED | rc=0 >>
+* * * * * www /usr/local/bin/php /data/www-data/hupu.com/du-lannister/yii schedule/run --scheduleFile=/data/www-data/hupu.com/du-lannister/config/schedule.php >> /data/www-data/hupu.com/du-lannister/runtime/logs/schedule.log 2>&1
+MAILTO=""
+10.22.228.189 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.91 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.249.53 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.255.249.53\". Make sure this host can be reached over ssh: ssh: connect to host 10.255.249.53 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.255.249.54 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.255.249.54\". Make sure this host can be reached over ssh: ssh: connect to host 10.255.249.54 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.2.56.54 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.150 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.18 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.16 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.90 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.17 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.149 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.53 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.188 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.148 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.52 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.89 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.187 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.8 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.9 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.5 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.6 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.4 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.22.228.186 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.51 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.88 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.147 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.87 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.84 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.86 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.85 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.146 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.83 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.145 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.144 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.142 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.1.132.140 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.1.132.141 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.1.132.139 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.81 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.15 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.252 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.255.255.14 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.1 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.251 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.21.175.80 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.22.228.184 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.79 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.49 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.138 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.183 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.78 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.179 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.182 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.181 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.77 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.48 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.136 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.6.1.3 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.76 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.6.1.252 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.6.1.251 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.75 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.6.1.250 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.73 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.21.175.73\". Make sure this host can be reached over ssh: ssh: connect to host 10.21.175.73 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.21.175.74 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.180 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.179 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.178 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.72 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.71 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.70 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.69 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.5.4 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.22.228.177 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.46 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.66 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.134 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.67 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.12 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.21 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.20 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.19 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.177 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.24.37.18 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.45 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.176 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.175 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.64 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.63 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.43 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.133 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.44 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.132 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.174 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.173 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.61 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.62 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.42 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.41 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.131 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.130 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.5.248 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.2.56.40 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.169 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.170 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.39 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.173 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.24.37.17 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.59 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.38 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.58 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.56 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.55 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.21.175.55\". Make sure this host can be reached over ssh: ssh: connect to host 10.21.175.55 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.21.175.57 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.166 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.54 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.128 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.37 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.249.51 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.255.249.51\". Make sure this host can be reached over ssh: ssh: connect to host 10.255.249.51 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.255.249.50 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.255.249.50\". Make sure this host can be reached over ssh: ssh: connect to host 10.255.249.50 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.22.228.165 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.164 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.52 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.50 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.126 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.14 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.157 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.35 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.49 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.125 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.13 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.48 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.12 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.11 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.16 | CHANGED | rc=0 >>
+0 */2 * * * rm -rf /data/www-data/du/backup/
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.156 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.155 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.124 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.46 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.45 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.1.199 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.111.1.199\". Make sure this host can be reached over ssh: ssh: connect to host 10.111.1.199 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.22.228.154 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.43 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.153 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.42 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.152 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.151 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.170 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.169 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.167 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.168 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.24.37.6 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.5 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.4 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.3 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.2 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.1 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.37.0 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.255 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.254 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.253 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.252 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.251 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.249 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.250 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.248 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.247 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.246 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.245 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.244 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.243 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.242 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.241 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.240 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.239 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.238 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.237 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.236 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.235 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/root']
+10.24.36.234 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "module_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 102, in <module>\n  File \"<stdin>\", line 87, in _ansiballz_main\n  File \"/usr/lib64/python2.7/tempfile.py\", line 321, in mkdtemp\n    dir = gettempdir()\n  File \"/usr/lib64/python2.7/tempfile.py\", line 265, in gettempdir\n    tempdir = _get_default_tempdir()\n  File \"/usr/lib64/python2.7/tempfile.py\", line 212, in _get_default_tempdir\n    (\"No usable temporary directory found in %s\" % dirlist))\nIOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/root']\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+10.24.36.232 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.233 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.231 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.230 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.229 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.227 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.228 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.226 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.225 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.224 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.222 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.223 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.221 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.220 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.219 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.217 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.218 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.216 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.215 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.214 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.213 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.212 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.211 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.210 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.209 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.207 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.208 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.206 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.205 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.204 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.24.36.203 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.25.3.56 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.2.75 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.1.132.119 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.118 | CHANGED | rc=0 >>
+00 23 * * * sh /opt/databackup/etl/mysql-backup.sh >/opt/databackup/log/bakup.log
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.38 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.37 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.150 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.36 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.32 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.117 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.154 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.153 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.151 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.152 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.1.132.121 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.34 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.33 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.33 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.116 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.114 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.148 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.149 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.146 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.147 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.30 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.28 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.31 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.29 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.113 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.32 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.112 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.30 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.147 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.149 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.150 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.0.148 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.11 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.110 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.29 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.109 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.10 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.253.122 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.9 | CHANGED | rc=0 >>
+*/5 * * * * export PYTHONUNBUFFERED=1;cd /opt/deploy/tms/bin/; /opt/deploy/python3/bin/python3 dms.py >> ../logs/dms.log 2>&1
+*/5 * * * * export PYTHONUNBUFFERED=1;cd /opt/deploy/tms/bin/; /opt/deploy/python3/bin/python3 apollo.py >> ../logs/apollo.log 2>&1
+10.111.4.251 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.4.250 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.2.39 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.36 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.35 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.21.175.28 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.111.2.34 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.33 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.31 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.27 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.2.23 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.111.1.185 | CHANGED | rc=0 >>
+MAILTO=""
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.111.1.118 | CHANGED | rc=0 >>
+MAILTO=""
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.111.1.124 | CHANGED | rc=0 >>
+MAILTO=""
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.111.1.115 | CHANGED | rc=0 >>
+MAILTO=""
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.111.0.140 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.135 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.133 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.137 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.126 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.125 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.121 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.117 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.115 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.111 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.109 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.103 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.97 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.96 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.95 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.91 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.90 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.89 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.88 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.86 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.81 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.79 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.78 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.73 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.72 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.70 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.68 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.65 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.63 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.62 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.61 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.55 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.56 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.54 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.41 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.26 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.33 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.48 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.22 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.245 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.0.240 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.243 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.241 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.239 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.235 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.226 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.216 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.214 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.208 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.206 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.205 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.203 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.202 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.204 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.198 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+#Ansible: delete deploy history
+0 0 * * * bash /opt/bin/delete-deploy-history.sh
+10.111.0.197 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.194 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.193 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.190 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.187 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.0.186 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.3.182 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.3.180 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.3.181 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.21.175.27 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.3.178 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.111.3.179 | CHANGED | rc=0 >>
+#Ansible: time_logs
+*/5 * * * * /bin/bash /opt/time-log.sh
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+10.21.175.26 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.111.3.176 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.140 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.24 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.26 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.107 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.25.3.55 | CHANGED | rc=0 >>
+
+10.2.56.25 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.104 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.24 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.103 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.23 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.102 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.139 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.22 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.101 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.18 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.138 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.22 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.21 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.17 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.16 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.15 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.100 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.97 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.99 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.14 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.96 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.94 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.93 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.95 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.92 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.137 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.91 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.13 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.12 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.11 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.98 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.19 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.89 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.20 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.9 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.135 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.10 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.8 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.90 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.7 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.134 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.6 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.18 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.88 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.87 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.133 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.5 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.17 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.84 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.83 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.82 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.81 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.132 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.4 | CHANGED | rc=0 >>
+*/3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+10.1.132.80 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.8 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.3 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.175.0 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.2 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.175.1 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.79 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.78 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.253.107 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.255 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.77 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.131 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.254 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.253 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.76 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.130 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.252 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.16 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.75 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.129 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.7 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.251 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.30.217.8 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.30.217.8\". Make sure this host can be reached over ssh: ssh: connect to host 10.30.217.8 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.1.132.74 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.15 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.73 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.25.1.11 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.250 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.248 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.249 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.128 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.247 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.14 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.72 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.6 | CHANGED | rc=0 >>
+#*/1 * * * * /bin/bash  /opt/script/syn.sh 2>&1 > /opt/script/nohup.log
+10.255.255.5 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.5.1.182 | CHANGED | rc=0 >>
+MAILTO=""
+#Ansible: ntpdate aliyun ntp server
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.22.228.236 | CHANGED | rc=0 >>
+#*/10 * * * * /usr/local/webserver/php/bin/php /data/www-data/du/web/index.php crontab handleSendMessage >> /tmp/handleSendMessage_0.log
+#*/10 * * * * /usr/local/webserver/php/bin/php /data/www-data/du/web/index.php crontab handleNoticeOrders >> /tmp/HandleNoticeOrders_0.log
+*/1 * * * * echo hello >> /tmp/test.log
+10.1.1.178 | CHANGED | rc=0 >>
+MAILTO=""
+#Ansible: ntpdate aliyun ntp server
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.1.1.180 | CHANGED | rc=0 >>
+MAILTO=""
+#Ansible: ntpdate aliyun ntp server
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.5.1.181 | CHANGED | rc=0 >>
+MAILTO=""
+#Ansible: ntpdate aliyun ntp server
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.1.1.179 | CHANGED | rc=0 >>
+MAILTO=""
+#Ansible: ntpdate aliyun ntp server
+@weekly /usr/sbin/ntpdate 10.143.33.50
+10.22.228.127 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.246 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.13 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.71 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.6.0.56 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.4 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.126 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.245 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.12 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.70 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.125 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.244 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.11 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.69 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.253.92 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.68 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.35.0.193 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.239 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.30.216.254 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.124 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.238 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.10 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.67 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.9 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.123 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.66 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.237 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.65 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.3 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.2 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.122 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.236 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.121 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.8 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.1 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.21.174.235 | CHANGED | rc=0 >>
+*/2 * * * * . /etc/profile;python /etc/safedog/sdcc/script/sdmonitor_check.py -c
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.7 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.120 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.234 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.64 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.6 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.40.0.207 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.252 | CHANGED | rc=0 >>
+* * * * * sh /opt/cron.sh
+10.255.253.90 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.253.87 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.119 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.233 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.56.5 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.118 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.255.251 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.63 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.232 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.62 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.61 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.4.240.118 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.2.56.4 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.22.228.102 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.110 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.114 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.99 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.98 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.91 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.100 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.94 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.101 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.89 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.105 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.116 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.113 | CHANGED | rc=0 >>
+
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.97 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.106 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.88 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.87 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.112 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.93 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.96 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.95 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.111 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.103 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.108 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.107 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.104 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.90 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.92 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.86 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.115 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.255.253.82 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.58 | CHANGED | rc=0 >>
+
+10.1.132.57 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.1.132.57\". Make sure this host can be reached over ssh: ssh: connect to host 10.1.132.57 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.21.174.230 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.227 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.209 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.229 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.219 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.212 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.218 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.221 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.201 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.200 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.223 | CHANGED | rc=0 >>
+0 */2 * * * rm -rf /data/www-data/du/backup/
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.226 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.224 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.197 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.204 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.206 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.225 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.208 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.203 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.214 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.196 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.220 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.192 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.211 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.210 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.228 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.198 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.194 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.202 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.207 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.205 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.217 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.222 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.216 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.215 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.21.174.193 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.228.82 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.22.228.82\". Make sure this host can be reached over ssh: ssh: connect to host 10.22.228.82 port 22: Connection refused\r\n", 
+    "unreachable": true
+}
+10.21.174.195 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.226 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.225 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.222 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.247 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.232 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.218 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.236 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.235 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.250 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.246 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.227 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.242 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.243 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.245 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.241 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.216 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.217 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.238 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.248 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.220 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.237 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/root']
+10.2.55.221 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "module_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 102, in <module>\n  File \"<stdin>\", line 87, in _ansiballz_main\n  File \"/usr/lib64/python2.7/tempfile.py\", line 321, in mkdtemp\n    dir = gettempdir()\n  File \"/usr/lib64/python2.7/tempfile.py\", line 265, in gettempdir\n    tempdir = _get_default_tempdir()\n  File \"/usr/lib64/python2.7/tempfile.py\", line 212, in _get_default_tempdir\n    (\"No usable temporary directory found in %s\" % dirlist))\nIOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/root']\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+10.2.55.224 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.22.39.104 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.22.39.104\". Make sure this host can be reached over ssh: ssh: connect to host 10.22.39.104 port 22: Connection timed out\r\n", 
+    "unreachable": true
+}
+10.2.55.219 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.215 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.233 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.214 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.229 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.2.55.213 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.3.198.215 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.3.198.201 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.3.198.190 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.53 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.50 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.36 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.30 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.48 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.52 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.26 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.38 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.25 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.42 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.43 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.41 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.44 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.35 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.24 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.28 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.54 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.46 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.29 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.55 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.34 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.51 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.66.0.210 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Data could not be sent to remote host \"10.66.0.210\". Make sure this host can be reached over ssh: ssh: connect to host 10.66.0.210 port 22: Connection timed out\r\n", 
+    "unreachable": true
+}
+10.1.132.19 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.37 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.27 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.49 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.32 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.39 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.18 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.31 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.47 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.21 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.22 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.45 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.33 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.17 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.1.132.20 | CHANGED | rc=0 >>
+@reboot cd /opt/deploy/ && bash start.sh
+10.1.132.23 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.246 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.245 | CHANGED | rc=0 >>
+* * * * * sh /opt/cron.sh
+10.255.255.243 | FAILED | rc=1 >>
+no crontab for rootnon-zero return code
+10.255.255.244 | CHANGED | rc=0 >>
+*/1 * * * * python3.6 /usr/local/bin/jumpserver_add_hosts.py >/dev/null 2>&1 
+30 1 * * * python3 /usr/local/bin/get_cpu.py

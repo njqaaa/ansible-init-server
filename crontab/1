@@ -1,0 +1,9 @@
+    512 @reboot cd /opt/deploy/ && bash start.sh
+    118 */5 * * * * /bin/bash /opt/time-log.sh
+     19 */3 * * * * sh /home/admin/edas-agent/bin/monitor.sh
+      2 * * * * * sh /opt/cron.sh
+      2 @reboot bash /etc/init.d/system-init.sh
+      2 */5 * * * * /bin/bash /opt/bin/clean-log.sh
+      1 #*/1 * * * * /bin/bash  /opt/script/syn.sh 2>&1 > /opt/script/nohup.log
+      1 0 0 * * * bash /opt/bin/delete-deploy-history.sh
+      1 00 23 * * * sh /opt/databackup/etl/mysql-backup.sh >/opt/databackup/log/bakup.log

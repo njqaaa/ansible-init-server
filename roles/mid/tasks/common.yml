@@ -13,7 +13,7 @@
   - "saltstack"
 
 - name: add consul link
-  shell: ln -sf "{{ REMOTE_PATH }}"/consul/consul "{{ BIN_DIR}}"
+  shell: ln -sf "{{ REMOTE_PATH }}"/consul/consul "{{ BIN_PATH}}"
 
 - name: sync mid script
   template:
@@ -50,7 +50,7 @@
   ignore_errors: yes
 
 - name: 注册变量saltstack
-  shell: "ps aux | grep /usr/bin/salt-minion | grep -v grep"
+  shell: "ls /etc/salt"
   register: saltstack
   ignore_errors: yes
 
@@ -58,5 +58,5 @@
   shell: "{{ REMOTE_PATH }}/{{ item }} -P"
   with_items:
   - "saltstack/install_salt.sh"
-  when: '"/usr/bin/salt-minion" not in saltstack.stdout'
+  when: '"minion" not in saltstack.stdout'
   ignore_errors: yes

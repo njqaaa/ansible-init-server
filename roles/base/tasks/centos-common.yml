@@ -1,15 +1,18 @@
-#- name: 添加EPEL仓库
-#  yum: name=epel-release state=latest
+- name: 添加EPEL仓库
+  yum: name=epel-release state=latest
+
+- name: yum public key
+  shell: rpm --import http://mirrors.163.com/centos/RPM-GPG-KEY-CentOS-7
 
 - name: 安装基础软件包
   yum: 
     name: 
-      - jq                  # 轻量JSON处理程序，安装docker查询镜像需要
-      - bash-completion     # bash命令补全工具，需要重新登录服务器生效
-      - rsync               # 文件同步工具，分发证书等配置文件需要
-      - mlocate             # 快速查找文件
-      - strace              # 调试
-      - htop                # top高级版
+      - jq
+      - bash-completion
+      - rsync
+      - mlocate
+      - strace
+      - htop
       - tar
       - lsof
       - ngrep
@@ -19,5 +22,13 @@
       - nload
       - iftop
       - iotop
+      - telnet
+      - ntpdate
+      - unzip
+      - lrzsz
+      - cloud-utils-growpart
+      - xfsprogs
+      - bind-utils
+      - deltarpm
     state: latest
 

@@ -1,0 +1,19 @@
+- name: sync mid script
+  template:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}/{{ item }}"
+  with_items:
+  - "jaeger/jaeger-agent.service"
+
+- name: add jaeger-agent.service
+  shell: mv "{{ REMOTE_PATH }}/{{ item.src }}" "{{ item.dest }}"
+  with_items:
+  - {src: "jaeger/jaeger-agent.service", dest: "{{ SYSTEMD_PATH }}/jaeger-agent.service" }
+
+- name: restart service
+  service:
+    name: "{{ item }}"
+    state: restarted
+    enabled: true
+  with_items:
+  - "jaeger-agent.service"

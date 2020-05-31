@@ -1,0 +1,2 @@
+export DATACENTER=java-prd
+export CONSUL_SERVERS="10.50.0.99 10.50.0.34 10.50.0.114 10.50.0.1 10.50.0.9"
