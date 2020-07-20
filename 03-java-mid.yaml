@@ -1,6 +1,6 @@
 # prepare tasks for all nodes
 - hosts:
-  - 10.240.95.30
+  - all-java
   roles:
   - java-mid
 

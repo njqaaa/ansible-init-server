@@ -1,6 +1,6 @@
 # prepare tasks for all nodes
 - hosts:
-  - duapp-api-service
+  - all
   roles:
   - base
 
