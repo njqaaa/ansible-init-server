@@ -1,6 +1,0 @@
-# prepare tasks for all nodes
-- hosts:
-  - php_nginx
-  roles:
-  - php_nginx
-
