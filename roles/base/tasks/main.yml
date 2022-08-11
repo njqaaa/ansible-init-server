@@ -1,0 +1,66 @@
+- import_tasks: centos-common.yml
+  when: ansible_distribution == "CentOS"
+
+- name: sync anacrontab
+  copy: src=anacrontab dest=/etc/anacrontab backup=yes
+
+- name: logrotate -f /etc/logrotate.conf
+  shell: logrotate -f /etc/logrotate.conf
+  ignore_errors: yes
+ 
+- name: sync init.d
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ INIT_D_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "init.d/"
+
+- name: sync logrotate
+  synchronize:
+    src: "{{ item }}"
+    dest: "/etc/logrotate.d"
+    recursive: yes
+  with_items:
+  - "logrotate.d/"
+
+- name: sync profile.d
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ PROFILE_D_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "profile.d/"
+
+- name: sync opt bin
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ OPT_BIN_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "bin/"
+
+- name: ntpdate for reboot
+  cron: name="ntpdate for reboot" special_time="reboot" job="/usr/sbin/ntpdate ntp1.aliyun.com" backup=yes
+
+- name: add ntpdate time
+  cron: name="update time" minute="0" hour="*/6" job="/usr/sbin/ntpdate ntp1.aliyun.com" backup=yes
+
+- name: system init
+  cron: name="system init for reboot" special_time="reboot" job="bash {{ INIT_D_PATH }}/system-init.sh" backup=yes
+
+- name: add delete-deploy-history.sh
+  cron: name="delete deploy history" minute="0" hour="0" job="bash {{OPT_BIN_PATH}}/delete-deploy-history.sh" backup=yes
+
+- name: logrotate -f /etc/logrotate.conf
+  cron: name="logrotate old log" minute="59" hour="1" job="/opt/bin/logrotate-log.sh" backup=yes
+
+
+#- name: tcpdump 3306
+#  cron: name="tcpdump 3306" minute="38" hour="22" job="source /etc/profile && bash /opt/bin/tcpdump-3306.sh" backup=yes

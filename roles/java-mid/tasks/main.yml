@@ -1,0 +1,17 @@
+- name: sync mid
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "jaeger"
+  - "arthas"
+
+- import_tasks: centos-7.yml
+  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+
+# 预留
+#- import_tasks: centos-6.yml
+#  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"

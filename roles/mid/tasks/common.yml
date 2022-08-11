@@ -1,0 +1,62 @@
+- name: sync mid
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}"
+    owner: true
+    group: true
+    recursive: yes
+  with_items:
+  - "node_exporter"
+  - "consul"
+  - "ilogtail"
+  - "cloudmonitor"
+  - "saltstack"
+
+- name: add consul link
+  shell: ln -sf "{{ REMOTE_PATH }}"/consul/consul "{{ BIN_PATH}}"
+
+- name: sync mid script
+  template:
+    src: "{{ item }}"
+    dest: "{{ REMOTE_PATH }}/{{ item }}"
+    owner: "ops"
+    group: "ops"
+    mode: "0755"
+  with_items:
+  - "consul/start-consul-agent.sh"
+
+- name: 注册变量ilogtail
+  shell: "ps aux | grep /usr/local/ilogtail/ilogtail | grep -v grep"
+  register: ilogtail
+  ignore_errors: yes
+
+- name: exec ilogtail script
+  shell: "{{ REMOTE_PATH }}/{{ item }}"
+  with_items:
+  - "ilogtail/install-ilogtail.sh"
+  when: '"/usr/local/ilogtail/ilogtail" not in ilogtail.stdout'
+  ignore_errors: yes
+
+- name: 注册变量cloudmonitor
+  shell: "/usr/local/cloudmonitor/CmsGoAgent.linux-amd64 version"
+  register: cloudmonitor
+  ignore_errors: yes
+
+- name: exec script
+  shell: "{{ REMOTE_PATH }}/{{ item }}"
+  with_items:
+  - "cloudmonitor/install-cloudmonitor.sh"
+  when: '"2.1.56" not in cloudmonitor.stdout'
+  ignore_errors: yes
+
+- name: 注册变量saltstack
+  shell: "ls /etc/salt"
+  register: saltstack
+  ignore_errors: yes
+
+- name: exec saltstack script
+  shell: "{{ REMOTE_PATH }}/{{ item }} -P"
+  with_items:
+  - "saltstack/install_salt.sh"
+  when: '"minion" not in saltstack.stdout'
+  ignore_errors: yes

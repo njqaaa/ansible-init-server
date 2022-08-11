@@ -1,0 +1,6 @@
+REMOTE_PATH: /opt
+INIT_D_PATH: /etc/init.d
+PROFILE_D_PATH: /etc/profile.d
+SYSTEMD_PATH: /etc/systemd/system
+BIN_PATH: /usr/local/bin
+OPT_BIN_PATH: /opt/bin

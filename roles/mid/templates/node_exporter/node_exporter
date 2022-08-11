@@ -1,0 +1,35 @@
+#!/bin/bash
+# chkconfig: 2345 10 90  
+app_name="node_exporter"
+pid_file="/var/run/${app_name}.pid"
+start() {
+        echo -n $"Starting ${application_name} logger: "
+        nohup {{ REMOTE_PATH }}/${app_name}/${app_name} >> /tmp/${app_name}.log 2>&1 & echo $! > ${pid_file}
+}
+stop() {
+        echo "Shutting down ${application_name} logger: "
+        if [[ -f ${pid_file} ]];then
+             kill -9 $(cat ${pid_file})
+        fi
+}
+restart() {
+        stop
+        start
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        restart
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart}"
+        exit 3
+esac
+
+exit $?

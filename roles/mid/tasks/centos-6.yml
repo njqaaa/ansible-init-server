@@ -1,0 +1,19 @@
+- name: sync mid script 
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  with_items:
+  - {src: "node_exporter/node_exporter", dest: "{{ INIT_D_PATH }}/node_exporter" }
+
+- name: restart 
+  shell: /etc/init.d/{{ item }} restart
+  with_items:
+  - "node_exporter"
+
+- name: chkconfig --add
+  shell: chkconfig --add {{ item }}
+  with_items:
+  - "node_exporter"

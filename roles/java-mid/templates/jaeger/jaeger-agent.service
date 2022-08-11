@@ -1,0 +1,15 @@
+[Unit]
+Description=Jaeger Agent
+Documentation=https://www.jaegertracing.io/
+After=network-online.target
+
+[Service]
+User=root
+Restart=on-failure
+
+#Change this line if you download the
+#Prometheus on different path user
+ExecStart={{ REMOTE_PATH }}/jaeger/jaeger-agent --reporter.grpc.host-port=jaeger-collector.poizon.com:14250
+
+[Install]
+WantedBy=multi-user.target
